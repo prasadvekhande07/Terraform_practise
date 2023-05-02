@@ -1,15 +1,11 @@
 provider "aws" {
-  profile = "default"
 }
 
-
-resource "aws_s3_bucket" "bucket" {
-  bucket = "myawsbucket12345554187"
-  acl    = "public"
+resource "aws_s3_bucket" "example" {
+  bucket = "my-tf-test-bucket"
 
   tags = {
     Name        = "My bucket"
     Environment = "Dev"
   }
 }
-
